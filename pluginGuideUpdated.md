@@ -9,6 +9,7 @@ These Plugins can be used to add more functionality to the editor, or perhaps cu
 * Add a reference to the core ChroMapper file, `Main.dll`. It can be found in the `ChroMapper_Data/Managed` folder.
 * Add references to any other ChroMapper or Unity library you may need. These can also be found in the `ChroMapper_Data/Managed` folder:
     * `UnityEngine.CoreModule.dll` - The core of Unity. Reference this if you need access to the Unity engine.
+    * `UnityEngine.AssetBundleModule` - Reference this if you are planning to load or interact with asset bundles.
     * `UnityEngine.UI.dll` - Unity's UI system. Reference this if you want to create custom UI.
     * `Unity.TextMeshPro.dll` - The text system used by ChroMapper.
     * `Unity.InputSystem.dll` - The new Input System, heavily used by ChroMapper.
