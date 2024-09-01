@@ -40,6 +40,20 @@ public class Plugin
 
 For now the plugin interface is very barebones, it may be expanded upon in the future.
 
+### Helpful tools
+
+If you are looking to publicize an assembly such as ``Main.dll``, you can use [BepInEx.AssemblyPublicizer.MSBuild](https://github.com/BepInEx/BepInEx.AssemblyPublicizer) to publicize the assembly. Make sure you are targeting ``.NET Standard 2.1``.
+
+You can also utilize **post-build events** to copy the outputted plugin assembly into Chromapper's Directory automatically. To do this, you want to open your projects properties, and scroll down to **Events**, and find ``Post-build`` event.
+<br>
+Next, you want to add this to the event: 
+<br> 
+``xcopy /Y "$(TargetDir)<PluginFileName>" "<ChroMapper Plugins Folder Path>"``
+<br>
+Example: 
+<br>
+``xcopy /Y "$(TargetDir)ExtendedLightIDs.dll" "$(ChroMapperDir)\Plugins"`` (Note: This example uses environment variables to shorten the CM directory to only ``$(ChroMapperDir)``).
+
 ## CMUI
 CMUI is a plugin-friendly interface for creating UI, introduced in ChroMapper `0.8.459`. It has been retrofitted into the older Dialog Box APIs, and will see expanded rollout in the near future.
 
