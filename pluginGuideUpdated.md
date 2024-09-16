@@ -60,7 +60,7 @@ CMUI is a plugin-friendly interface for creating UI, introduced in ChroMapper `0
 ### Creating a Custom Dialog Box
 For most developers, CMUI begins with the Dialog Box. The Dialog Box system has been completely revamped to use CMUI under the hood. While existing Dialog Box APIs still work, if you are using anything advanced, we recommend using the new Dialog Box API to squeeze everything into one box.
 
-To create a new Dialog Box powered by CMUI, call `PersistentUI.Instance.CreateDialogBox()`. You are then given back the newly created `DialogBox` object, which will be used to manage the Dialog Box itself.
+To create a new Dialog Box powered by CMUI, call `PersistentUI.Instance.CreateNewDialogBox()`. You are then given back the newly created `DialogBox` object, which will be used to manage the Dialog Box itself.
 
 ### Adding Components
 CMUI works with *components*. In the context of CMUI, components wrap pre-created UI and expose easy-to-use APIs for that UI. Each CMUI component is either designed to handle a certain type (From primitive types like `int` and `strings` to larger structs and classes like `Color`s and `Progress<float>`s), or can exist without handling any type at all. Most components also include labels, which can be toggled on and off.
